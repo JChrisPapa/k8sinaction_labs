@@ -18,4 +18,3 @@ spec:
       containers: 
       - name: kubia
         image: luksa/kubia
-
