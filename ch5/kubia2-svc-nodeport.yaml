@@ -7,6 +7,6 @@ spec:
   ports: 
   - port: 80
     targetPort: 8080
-    nodePort: 30123
+    nodePort: 30223
   selector: 
     app: kubia
