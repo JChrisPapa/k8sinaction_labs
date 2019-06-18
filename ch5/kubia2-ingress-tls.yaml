@@ -1,13 +1,17 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: kubia
+  name: kubia2
 spec: 
+  tls: 
+  - hosts:
+    - kubia2.example.com
+    secretName: tls-secret
   rules: 
-  - host: kubia.example.com
+  - host: kubia2.example.com
     http:
       paths:
       - path: /
         backend: 
-          serviceName: kubia-nodeport
+          serviceName: kubia2-nodeport
           servicePort: 80
