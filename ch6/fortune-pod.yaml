@@ -4,7 +4,7 @@ metadata:
   name: fortune
 spec:
   containers: 
-  - image: yj1dreamer/fortune
+  - image: yj1dreamer/fortune:latest
     name: html-generator
     volumeMounts: 
       - name: html
