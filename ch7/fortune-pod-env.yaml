@@ -4,8 +4,10 @@ metadata:
   name: fortune2s
 spec:
   containers:
-  - image: yj1dreamer/fortune:args
-    args: ["2"]
+  - image: yj1dreamer/fortune:env
+    env: 
+    - name: INTERVAL
+      value: "30"
     name: html-generator
     volumeMounts: 
     - name: html

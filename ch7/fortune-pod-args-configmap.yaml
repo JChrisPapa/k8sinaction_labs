@@ -5,7 +5,13 @@ metadata:
 spec:
   containers:
   - image: yj1dreamer/fortune:args
-    args: ["2"]
+    env:
+    - name: INTERVAL
+      valueFrom:
+        configMapKeyRef: 
+          name: fortune-config
+          key: sleep-interval
+    args: ["$(INTERVAL)"]
     name: html-generator
     volumeMounts: 
     - name: html
