@@ -14,4 +14,30 @@ items:
     gcePersistentDisk:
       pdName: pv-a
       fsType: ext4
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata: 
+    name: pv-b
+  spec: 
+    capacity:
+      storage: 1Mi
+    accessModes:
+      - ReadWriteOnce
+    persistentVolumeReclaimPolicy: Recycle
+    gcePersistentDisk:
+      pdName: pv-b
+      fsType: ext4
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata: 
+    name: pv-c
+  spec: 
+    capacity:
+      storage: 1Mi
+    accessModes:
+      - ReadWriteOnce
+    persistentVolumeReclaimPolicy: Recycle
+    gcePersistentDisk:
+      pdName: pv-c
+      fsType: ext4
       
