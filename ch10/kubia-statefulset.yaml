@@ -13,18 +13,18 @@ spec:
       containers:
       - name: kubia
         image: yj1dreamer/kubia-pet
-	ports: 
-	- name: http
-	  containerPort: 8080
-	volumeMounts:
-	- name: data
-	  mountPath: /var/data
+        ports: 
+        - name: http
+          containerPort: 8080
+        volumeMounts:
+        - name: data
+          mountPath: /var/data
   volumeClaimTemplates:
   - metadata:
       name: data
     spec: 
       resources:
         requests:
-	  storage: 1Mi
+          storage: 1Mi
       accessModes:
       - ReadWriteOnce

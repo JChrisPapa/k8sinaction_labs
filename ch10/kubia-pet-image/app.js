@@ -4,7 +4,7 @@ const fs = require('fs');
 
 const dataFile = "/var/data/kubia.txt";
 
-function fileExist( file ){
+function fileExists( file ){
     try {
         fs.statSync(file);
         return true;
