@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beata1
+kind: Deployment
+metadata: 
+  name: frontend
+spec:
+  replicase: 5
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution
+          - topologyKey: kubernetes.io/hostname
+            labelSelector:
+              matchLabels:
+                app: frontend
+      containeres:
+      - name: main
+        image: busybox
+        args:
+        - sleep
+        - "999999"
